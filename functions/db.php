@@ -13,11 +13,11 @@ function escape($string) {
 
 /**
  * @param $query
- * @return bool|mysqli_result
+ * @return object
  */
 function query($query) {
     global $mysqli;
-    return $mysqli->query($query);
+    return confirm($mysqli->query($query));
 }
 
 /**
@@ -33,15 +33,21 @@ function fetchAssoc(mysqli_result $result) {
 }
 
 /**
- * @param mysqli_result $result
+ * @param $result
+ * @return object
  */
-function confirm(mysqli_result $result) {
-    if (!$result) {
-        global $con;
-        die(mysqli_error($con));
+function confirm($result) {
+    global $mysqli;
+    if (mysqli_error($mysqli)) {
+        die(mysqli_error($mysqli));
     }
+    return $result;
 }
 
+/**
+ * @param mysqli_result $result
+ * @return int
+ */
 function countRows(mysqli_result $result) {
     return $result->num_rows;
 }

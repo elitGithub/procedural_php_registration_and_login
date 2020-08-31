@@ -2,6 +2,11 @@
 <?php include 'includes/nav.php'?>
 <div class="row">
 		<div class="col-lg-6 col-lg-offset-3">
+            <?php displayMessage();
+            if (isset($_POST['login-submit'])) {
+                validateLogin();
+            }
+            ?>
 		</div>
 	</div>
     	<div class="row">

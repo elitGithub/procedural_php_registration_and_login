@@ -3,7 +3,11 @@
 
 
     <div class="jumbotron">
-        <h1 class="text-center"> Admin Page</h1>
+        <h1 class="text-center"> <?php
+            if (!isLoggedIn()) {
+                redirect('login.php');
+            }
+            ?></h1>
     </div>
 
 

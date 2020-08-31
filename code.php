@@ -1,5 +1,6 @@
 <?php include 'includes/header.php'?>
-
+<?php if (!isset($_COOKIE['temp_access_code'])) redirect('index.php')?>
+<?php if (isset($_POST['code'])) validateCode() ?>
 
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">
@@ -7,7 +8,7 @@
 			<div class="alert alert-success alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert">
 					<span aria-hidden="true">×</span><span class="sr-only">Close</span>
-				</button>We have a sent a security code to your email <span>@edwin@email.com</span>
+				</button>We have a sent a security code to your email <span><?php echo $_GET['email'] ?></span>
 			</div>
 		</div>
 	</div>

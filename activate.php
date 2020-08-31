@@ -4,7 +4,7 @@
 
     <div class="jumbotron">
         <h1 class="text-center"> Activate Page</h1>
-    </div>
+        <p><?php activationUser() ?></p>
 
 
 <?php include "includes/footer.php";?>

@@ -1,5 +1,6 @@
 <?php include 'includes/header.php'?>
 <?php include 'includes/nav.php'?>
+<?php if (isset($_POST['recover-submit'])) recoverPassword($_POST['email']);?>
     <div class="row">
 				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
 					<div class="alert-placeholder">
@@ -25,7 +26,7 @@
 												</div>
 											</div>
 										</div>
-										<input type="hidden" class="hide" name="token" id="token" value="">
+										<input type="hidden" class="hide" name="token" id="token" value="<?php echo generateToken()?>">
 									</form>
 								</div>
 							</div>

@@ -1,4 +1,5 @@
 <?php include 'includes/header.php'?>
+<?php if (isset($_POST['reset-password-submit'])) resetUserPassword(); ?>
 	<div class="row">
 	</div>
     	<div class="row">
