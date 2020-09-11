@@ -45,9 +45,9 @@ function confirm($result) {
 }
 
 /**
- * @param mysqli_result $result
- * @return int
+ * @param $result
+ * @return mixed
  */
-function countRows(mysqli_result $result) {
+function countRows($result) {
     return $result->num_rows;
 }

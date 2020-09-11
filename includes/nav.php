@@ -11,9 +11,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="admin.php">Admin</a></li>
                 <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
                 <?php if (isLoggedIn()) echo '<li><a href="logout.php">Logout</a></li>'?>
                 <?php if (!isLoggedIn()) redirect('login.php')?>
             </ul>
