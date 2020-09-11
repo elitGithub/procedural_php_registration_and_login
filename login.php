@@ -1,5 +1,5 @@
 <?php include 'includes/header.php'?>
-<?php include 'includes/nav.php'?>
+<?php if (isLoggedIn()) redirect('index.php');  ?>
 <div class="row">
 		<div class="col-lg-6 col-lg-offset-3">
             <?php displayMessage();
@@ -61,4 +61,4 @@
 				</div>
 			</div>
 		</div>
-<?php include 'includes/footer.php'?>
+<?php include 'includes/footer.php'; ?>

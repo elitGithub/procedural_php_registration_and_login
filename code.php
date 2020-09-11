@@ -1,10 +1,11 @@
 <?php include 'includes/header.php'?>
 <?php if (!isset($_COOKIE['temp_access_code'])) redirect('index.php')?>
+<?php if (!isset($_GET['email'])) redirect('index.php')?>
 <?php if (isset($_POST['code'])) validateCode() ?>
 
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">
-
+            <?php displayMessage();?>
 			<div class="alert alert-success alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert">
 					<span aria-hidden="true">×</span><span class="sr-only">Close</span>
@@ -41,7 +42,7 @@
 
 											</div>
 										</div>
-										<input type="hidden" class="hide" name="token" id="token" value="">
+										<input type="hidden" class="hide" name="token" id="token" value="<?php $_COOKIE['temp_access_code'] ?>">
 									</form>
 								</div>
 							</div>

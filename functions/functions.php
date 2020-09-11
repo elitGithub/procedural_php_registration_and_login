@@ -226,7 +226,7 @@ function validateLogin(): void {
         }
         if (empty($errors)) {
             if (loginUser($email, $password)) {
-                redirect('admin.php');
+                redirect('index.php');
             } else {
                 $message = 'The provided credentials are incorrect.';
                 echo setValidationErrorMessage($message);

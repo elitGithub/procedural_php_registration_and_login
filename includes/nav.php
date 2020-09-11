@@ -15,6 +15,7 @@
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <?php if (isLoggedIn()) echo '<li><a href="logout.php">Logout</a></li>'?>
+                <?php if (!isLoggedIn()) redirect('login.php')?>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

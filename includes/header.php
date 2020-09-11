@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/scripts.js"></script>
+    <script defer src="js/scripts.js"></script>
 </head>
 <body>
 <div class="container">

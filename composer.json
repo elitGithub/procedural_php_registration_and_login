@@ -1,0 +1,7 @@
+{
+    "require": {
+        "adodb/adodb-php": "5.20",
+      "ext-mysqli": "*",
+      "ext-http": "*"
+    }
+}

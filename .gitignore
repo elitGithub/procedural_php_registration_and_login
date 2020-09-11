@@ -1,3 +1,5 @@
 .DS_Store
 .idea/
 reference_complete/
+vendor/
+composer.lock
