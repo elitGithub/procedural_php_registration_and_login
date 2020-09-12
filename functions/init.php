@@ -1,11 +1,7 @@
 <?php
 ob_start();
 session_start();
-
-const DB_HOST = 'localhost';
-const DB_USER = 'root';
-const DB_PASS = '';
-const DB_NAME = 'login_db';
+require_once 'includes/config.inc.php';
 
 include 'db.php';
 include 'is_email.php';

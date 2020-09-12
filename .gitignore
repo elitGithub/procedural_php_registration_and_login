@@ -3,3 +3,4 @@
 reference_complete/
 vendor/
 composer.lock
+config.inc.php
