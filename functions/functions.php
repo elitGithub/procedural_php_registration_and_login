@@ -84,8 +84,7 @@ function usernameAlreadyExists($userName) {
  * @return string
  */
 function generateToken() {
-    $token = $_SESSION['token'] = md5(uniqid(mt_rand(), true));
-    return $token;
+    return $_SESSION['token'] = md5(uniqid(mt_rand(), true));
 }
 
 /**

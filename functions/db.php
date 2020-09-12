@@ -28,7 +28,7 @@ function fetchArray(mysqli_result $result) {
     return $result->fetch_array(MYSQLI_NUM);
 }
 
-function fetchAssoc(mysqli_result $result) {
+function fetchAssoc($result) {
     return $result->fetch_array(MYSQLI_ASSOC);
 }
 
