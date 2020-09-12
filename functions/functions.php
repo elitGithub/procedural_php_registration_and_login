@@ -28,8 +28,6 @@ function jsRedirect(string $location) {
 function setMessage (string $message) {
     if (!empty($message)) {
         $_SESSION['message'] = $message;
-    } else {
-        $message = '';
     }
 }
 
@@ -116,6 +114,7 @@ function setValidationSuccessMessage($successMessage) {
  */
 function validateUserRegistration() {
     $errors = [];
+    $formData = [];
     $minLength = 2;
     $maxLength = 20;
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
